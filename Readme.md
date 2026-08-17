@@ -1,6 +1,6 @@
-# Личный проект «{{projectTitle}}»
+# Личный проект «Кексаграм»
 
-* Студент: [{{userName}}]({{userProfile}}).
+* Студент: [Kolbina Ekaterina](https://github.com/Ekaterina-alekse).
 * Наставник: `Неизвестно`.
 
 ---
