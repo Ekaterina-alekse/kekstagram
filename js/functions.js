@@ -1,21 +1,16 @@
 // Функция для проверки длины строки
-function lenghtLine(line, maxLength) {
-  return line.length <= maxLength;
+function checkStringLenght(textToValidate, maxLength) {
+  return textToValidate.length <= maxLength;
 }
 
 // Функция для проверки, является ли строка палиндромом.
-
-function isPalindrome(line) {
-  const normalized = line.replaceAll(' ', '').toLowerCase();
-  let reversed = '';
-  for (let i = normalized.length - 1; i >= 0; i--) {
-    reversed += normalized[i];
-  }
-  return normalized === reversed;
+function isPalindrome(string) {
+  const cleaned = string.replaceAll(' ', '').toLowerCase();
+  const reversed = cleaned.split('').reverse().join('');
+  return cleaned === reversed;
 }
 
 // Функция принимает строку, извлекает содержащиеся в ней цифры от 0 до 9 и возвращает их в виде целого положительного числа.
-
 function extractNumbers(input) {
   const string = input.toString();
   let result = '';
