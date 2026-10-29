@@ -1,7 +1,20 @@
-const getRandomNumber = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1)) + min;
+//ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ
+export function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-const getRandomElement = (elements) =>
-  elements[getRandomNumber(0, elements.length - 1)];
+export function getRandomElement(arr) {
+  const index = getRandomNumber(0, arr.length - 1);
+  return arr[index];
+}
 
-export { getRandomNumber, getRandomElement };
+export function getUniqueNumbers(count, max) {
+  let result = [];
+  while (result.length < count) {
+    const num = getRandomNumber(1, max);
+    if (!result.includes(num)) {
+      result.push(num);
+    }
+  }
+  return result;
+}

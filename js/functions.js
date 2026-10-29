@@ -1,5 +1,5 @@
 // Функция для проверки длины строки
-function checkStringLenght(textToValidate, maxLength) {
+function checkStringLength(textToValidate, maxLength) {
   return textToValidate.length <= maxLength;
 }
 
@@ -23,3 +23,19 @@ function extractNumbers(input) {
   }
   return result === '' ? NaN : parseInt(result, 10);
 }
+
+// Переводит время в минуты
+const getMinutes = (time) => {
+  const [hours, minutes] = time.split(':');
+  return Number(hours) * 60 + Number(minutes);
+};
+
+// Проверяет, укладывается ли встреча в рабочий день
+const checkMeeting = (workStart, workEnd, meetingStart, duration) => {
+  const workStartMinutes = getMinutes(workStart);
+  const workEndMinutes = getMinutes(workEnd);
+  const meetingStartMinutes = getMinutes(meetingStart);
+  const meetingEndMinutes = meetingStartMinutes + duration;
+
+  return meetingStartMinutes >= workStartMinutes && meetingEndMinutes <= workEndMinutes;
+};

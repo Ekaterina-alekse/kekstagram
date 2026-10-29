@@ -1,6 +1,4 @@
-import { generatePhotos } from './data.js';
+import { createPhotos } from './photo.js';
 
-const photos = generatePhotos();
-
-console.log('Всего фотографий:', photos.length);
-console.log('Первая фотография:', photos[0]);
+const photos = createPhotos();
+console.log(photos);
