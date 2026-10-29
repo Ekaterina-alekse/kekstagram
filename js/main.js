@@ -1,4 +1,6 @@
 import { createPhotos } from './photo.js';
+import { renderMiniature } from './miniature-rendering.js';
 
 const photos = createPhotos();
-console.log(photos);
+const picturesContainer = document.querySelector('.pictures');
+renderMiniature(photos, picturesContainer);
