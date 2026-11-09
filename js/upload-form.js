@@ -1,4 +1,5 @@
 import './validation.js';
+import { resetScale, resetEffects } from './effects.js';
 
 const uploadInput = document.querySelector('.img-upload__input');
 const uploadOverlay = document.querySelector('.img-upload__overlay');
@@ -17,6 +18,9 @@ const closeUploadForm = () => {
   body.classList.remove('modal-open');
 
   form.reset();
+
+  resetScale();
+  resetEffects();
 
   document.removeEventListener('keydown', onEscKeyDown);
 };
