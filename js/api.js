@@ -1,8 +1,8 @@
-const SERVER_URL = 'https://32.javascript.htmlacademy.pro/kekstagram/data';
+const SERVER_URL = 'https://32.javascript.htmlacademy.pro/kekstaam';
 
 const getData = async () => {
   try {
-    const response = await fetch(`${SERVER_URL}`);
+    const response = await fetch(`${SERVER_URL}/data`);
 
     if (!response.ok) {
       throw new Error(`Ошибка загрузки данных: ${response.status}`);
